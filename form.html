@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <p>Антіпов Богдан | АНД-31 | Варіант №1</p>
+</header>
+
+<main>
+    <a href="index.html">На головну</a>
+
+    <h1>Результати поточної сесії</h1>
+
+    <p>
+        Завдання: створити форму для введення
+        результатів заліку або іспиту.
+    </p>
+
+    <form action="form.html" method="get">
+
+        <fieldset>
+            <legend>Дані про студента</legend>
+
+            <label>ПІБ студента:</label>
+            <input type="text" name="student" required>
+
+            <label>Група:</label>
+            <select name="group" required>
+                <option value="">Оберіть групу</option>
+                <option>АНД-31</option>
+                <option>АНД-32</option>
+            </select>
+
+            <label>Оцінка (0–100):</label>
+            <input type="number" name="grade"
+                   min="0" max="100" required>
+
+            <label>Дата проведення:</label>
+            <input type="date" name="date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дані про залік або іспит</legend>
+
+            <label>Дисципліна:</label>
+            <select name="subject" required>
+                <option value="">Оберіть дисципліну</option>
+                <option>Веб-застосунки</option>
+                <option>Аналіз даних</option>
+                <option>Бази даних</option>
+            </select>
+
+            <p>Тип контролю:</p>
+
+            <label>
+                <input type="radio" name="type"
+                       value="Залік" required>
+                Залік
+            </label>
+
+            <label>
+                <input type="radio" name="type"
+                       value="Іспит">
+                Іспит
+            </label>
+
+            <label>Прізвище викладача:</label>
+            <input type="text" name="teacher" required>
+        </fieldset>
+
+        <button type="submit">Відправити дані</button>
+
+    </form>
+</main>
+
+</body>
+</html>
